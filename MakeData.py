@@ -16,6 +16,7 @@ class reprocess:
         #file로 부터 데이터 line 읽어 들이기
         i =0
         wordcount = 0
+
         with open('C:\\Users\\HelloHenna\\Desktop\\project_test\\Data\\testdata.tsv', newline='', encoding="utf8") as csvfile:
             spamreader = csv.reader(csvfile, delimiter=' ', quotechar='\t')
             #word = ', '.join(row)[0:11]  # user id 자르는거. 0:11 번째까지.
@@ -64,8 +65,5 @@ MakeFile = reprocess(101, 1001, 5, 10)
 MakeFile.LoadData()
 print(len(MusicList))
 print(UserList)
-#df = DataFrame(dictionary_list).T.fillna(0)
-#print(dictionary_list)
-#pprint(df)
-#print(np.multiply())
+
 print("---------------%s seconds-----------"% (time.time() - start_time))
